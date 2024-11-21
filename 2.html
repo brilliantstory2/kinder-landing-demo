@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style type="text/tailwindcss">
+        @font-face {
+            font-family: peachy-keen-jf;
+            src: url('assets/Fonts/peachy-keen-jf.otf');
+        }
+        @font-face {
+            font-family: nutella;
+            src: url('assets/Fonts/nutella_by_lyricwest_dd2f4g6.otf.ttf');
+        }
+
+        .montserrat {
+            font-family: "Montserrat", serif;
+            font-optical-sizing: auto;
+        }
+
+        .animate {
+            @apply transition-[height] ease-in-out duration-[500ms];
+        }
+        .mission {
+            @apply border-t-2 border-white;
+        }
+        .mission.locked {
+            @apply flex justify-center items-center h-[calc(55*100vh/896)];
+        }
+        .mission.normal {
+            @apply h-[calc(55*100vh/896)];
+        }
+        .mission_show {
+            @apply h-[calc(222*100vh/896)];
+        }
+        .mission_label_show {
+            @apply h-[calc(55*100vh/896)];
+        }
+        .participate_btn {
+            @apply mb-[calc(10*100vh/896)] bg-[#FDCC09] text-[calc(17*100vh/896)] px-[49px] py-[10px] rounded-full;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sticky z-10 top-0 bg-white w-full h-[62px] grid grid-cols-3 items-center  px-[14px]">
+        <div>
+            <img src="assets/Group 12230.png" />
+        </div>
+        <div class="flex justify-center">
+            <a href="index.html"><img class="min-w-[172px]" src="assets/Group 12956.png" /></a>
+
+        </div>
+        <div>
+            <div class="flex flex-row-reverse items-center">
+                <img src="assets/account_circle_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
+                <span class=" mr-[7px] text-[7px]">Benvenuto</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="relative" id="section_0">
+
+        <div class="h-[calc(100vh-62px)]">
+            <img src="assets/Group 13909.png" class="h-full w-full" />
+        </div>
+        <a onclick='navigateTo(1)' class="inline-block absolute bottom-[10px] left-[50%] translate-x-[-50%]">
+            <img src="assets/Group 13647.png">
+        </a>
+    </div>
+
+    <div class="relative" id="section_1">
+        <div class="h-[calc(100vh-62px)]">
+            <img src="assets/Group 13910.png" class="h-full w-full" />
+        </div>
+        <div class="absolute bottom-[10px] left-[50%] translate-x-[-50%]">
+            <a onclick='navigateTo(0)' class="inline-block">
+                <img src="assets/Group 13673.png">
+            </a>
+            <a onclick='navigateTo(2)' class="inline-block">
+                <img src="assets/Group 13647.png">
+            </a>
+        </div>
+
+    </div>
+
+    <div class="relative" id="section_2">
+        <div class="h-[calc(100vh-62px)] bg-[#019EE2] flex flex-col">
+            <div class="mb-[18.6px]">
+                <p
+                    class="font-[peachy-keen-jf] text-[calc(28*100vh/896)] text-white text-center pt-[calc(66*100vh/896)]">
+                    Inizia ora!</p>
+                <p class="montserrat text-center px-[30px] text-[calc(16*100vh/896)] font-bold">Scopri la missione della
+                    settimana e se non
+                    l’ hai fatto recupera le precedenti!</p>
+            </div>
+
+            <div class=" flex-1 ">
+
+                <div class="text-white text-center">
+                    <div class="mission font-[peachy-keen-jf] normal animate" onclick="selectMission(this,1)">
+                        <div class="mission_label_show overflow-hidden animate" id="mission_label_1">
+                            <span class="text-[calc(17*100vh/896)]">Missione</span>
+                            <span class="text-[calc(33*100vh/896)]"> 1</span>
+                        </div>
+                        <div id="mission_1" style="background-image: url('assets/mission1-b.png');"
+                            class="h-0 overflow-hidden bg-no-repeat bg-center bg-[length:100%_100%] text-center animate flex flex-col items-center justify-between">
+                            <div>
+                                <p>
+                                    <span class="text-[calc(17*100vh/896)]">Missione</span><span
+                                        class="text-[calc(33*100vh/896)]"> 1</span>
+                                </p>
+                                <p class="text-white  text-[calc(17*100vh/896)]"><span class="max-w-[280px]">Dicci chi
+                                        sei!</span></p>
+                            </div>
+                            
+                            <p class="text-white  text-[calc(26*100vh/896)]"><span class="max-w-[280px]">Scopri l'indizio</span></p>
+                            <button
+                                class="participate_btn">Clicca
+                                qui</button>
+                        </div>
+                    </div>
+                    <div class="mission font-[peachy-keen-jf] normal animate" onclick="selectMission(this,2)">
+                        <div class="mission_label_show overflow-hidden animate" id="mission_label_2">
+                            <span class="text-[calc(17*100vh/896)]">Missione</span>
+                            <span class="text-[calc(33*100vh/896)]"> 2</span>
+                        </div>
+                        <div id="mission_2" style="background-image: url('assets/mission2-b.png');"
+                            class="h-0 overflow-hidden bg-no-repeat bg-center bg-[length:100%_100%] text-center animate flex flex-col items-center justify-between">
+                            <div>
+                                <p><span class="text-[calc(17*100vh/896)]">Missione</span><span
+                                    class="text-[calc(33*100vh/896)]"> 2</span></p>
+                            <p class="text-white  text-[calc(17*100vh/896)]"><span class="max-w-[280px]">Rifornisci
+                                    la dispensa!</span></p>
+                            </div>
+                            
+                            <p class="mb-[calc(30*100vh/896)] text-white  text-[calc(26*100vh/896)]"><span class="max-w-[280px]">Missione
+                                    completata</span></p>
+                            <!-- <button
+                                class="bg-[#FDCC09] text-[calc(17*100vh/896)] mt-[20px] px-[49px] py-[10px] rounded-full">Partecipa</button> -->
+                        </div>
+                    </div>
+                    <div class="mission font-[peachy-keen-jf] current animate mission_show" onclick="selectMission(this,3)">
+                        <div class="h-0 overflow-hidden  animate" id="mission_label_3">
+                            <span class="text-[calc(17*100vh/896)]">Missione</span>
+                            <span class="text-[calc(33*100vh/896)]"> 3</span>
+                        </div>
+                        <div id="mission_3" style="background-image: url('assets/Mask Group 11647.png');"
+                            class="mission_show overflow-hidden bg-no-repeat bg-center bg-[length:100%_100%] text-center animate flex flex-col items-center justify-between">
+                            <div>
+                                <p class=""><span class="text-[calc(17*100vh/896)]">Missione</span><span
+                                    class="text-[calc(33*100vh/896)]"> 3</span></p>
+                                <p class="text-white  text-[calc(17*100vh/896)]"><span class="max-w-[280px]">Occhio ai dettagli</span></p>
+                            </div>
+                            
+                            <p class="text-white  text-[calc(26*100vh/896)] leading-[30px]"><span class="max-w-[280px]">Prova a vincere subito la Box Colazione</span></p>
+                            <button
+                                class="participate_btn">Partecipa</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mission locked">
+                            <div><img src="assets/Group 13896.png" class="mr-[22.7px]" /></div>
+                            <span class="text-[calc(17*100vh/896)]">dal 07/04/2025 al 20/04/2025</span>
+                        </div>
+                        <div class="mission locked">
+                            <div><img src="assets/Group 13896.png" class="mr-[22.7px]" /></div>
+                            <span class="text-[calc(17*100vh/896)]">dal 21/04/2025 al 04/05/2025</span>
+                        </div>
+                        <div class="mission locked">
+                            <div><img src="assets/Group 13896.png" class="mr-[22.7px]" /></div>
+                            <span class="text-[calc(17*100vh/896)]">dal 05/05/2025 al 18/05/2025</span>
+                        </div>
+                        <div class="mission border-b-2 locked">
+                            <div><img src="assets/Group 13896.png" class="mr-[22.7px]" /></div>
+                            <span class="text-[calc(17*100vh/896)]">dal 19/05/2025 al 01/06/2025</span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="text-center pb-[10px]">
+                <a onclick='navigateTo(1)' class="inline-block">
+                    <img src="assets/Group 13673.png">
+                </a>
+                <a onclick='navigateTo(3)' class="inline-block">
+                    <img src="assets/Group 13647.png">
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="section_3">
+        <div class="h-[calc(100vh-62px)]">
+            <img src="assets/Group 13908.png" class="h-full w-full" />
+        </div>
+
+    </div>
+    <footer>
+        <div class="flex flex-col items-center py-[23px] gap-[13px]">
+            <span class="text-[14px]">Termini e condizioni d’uso</span>
+            <span class="text-[14px]">Informativa Privacy</span>
+            <span class="text-[14px]">ferrero.it</span>
+            <span class="text-[14px]">kinder.it</span>
+            <span class="text-[14px]">nutella.com</span>
+            <span class="text-[14px]">Gestione Profilo</span>
+            <div class="w-full flex justify-around">
+                <span class="text-[14px]">Copyright © Ferrero 2024</span>
+                <span class="text-[14px]">P.IVA 03629090048</span>
+            </div>
+            <span class="text-[14px]">Accessibilità</span>
+        </div>
+        <div class="w-full grid grid-cols-3 px-[14px] pb-[32px]">
+            <div class="flex flex-col-reverse">
+                <div>
+                    <img src="assets/Image 138.png" />
+                </div>
+
+            </div>
+            <div class="flex justify-center">
+                <img src="assets/Group 5586.png" />
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+<script>
+
+    function navigateTo(index) {
+        document.getElementById("section_" + index).scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    }
+
+    function selectMission(elem, index) {
+        if (elem.classList.contains('current')) return;
+        let currentLi = document.getElementsByClassName('current')[0];
+        let currentM = document.getElementsByClassName('mission_show')[0];
+
+        currentLi.classList.remove('current');
+        currentLi.classList.remove('mission_show');
+        currentLi.classList.add('normal');
+
+
+        currentLi.children[0].classList.remove('h-0');
+        currentLi.children[0].classList.add('mission_label_show');
+        currentLi.children[1].classList.remove('mission_show');
+        currentLi.children[1].classList.add('h-0');
+
+
+        elem.classList.remove('normal');
+        elem.classList.add('current');
+        elem.classList.add('mission_show');
+        document.getElementById('mission_label_' + index).classList.add('h-0');
+        document.getElementById('mission_label_' + index).classList.remove('mission_label_show');
+        document.getElementById('mission_' + index).classList.remove('h-0');
+        document.getElementById('mission_' + index).classList.add('mission_show');
+
+
+    }
+</script>
+
+
+</html>
